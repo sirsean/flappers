@@ -1,0 +1,11 @@
+{
+    "name": "Flapper Ten",
+    "description": "",
+    "image": "https://flappers.sirsean.me/images/10.png",
+    "attributes": [
+        {
+            "trait_type": "rlBTRFLY",
+            "value": "10"
+        }
+    ]
+}

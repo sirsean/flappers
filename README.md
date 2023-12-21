@@ -1,8 +1,17 @@
-# React + Vite
+# Flappers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Flappers is an NFT collection honoring the butterflies of Redacted Cartel.
 
-Currently, two official plugins are available:
+You are allowed to mint the NFTs if you've locked rlBTRFLY; there are escalating
+tiers of NFT, access to which are opened to increasing balances of rlBTRFLY in
+your wallet.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The contract itself is an ERC-1155. It accepts a small fee, in ETH, for minting
+a flapper.
+
+## Development
+
+```
+npm install
+npm run dev
+```

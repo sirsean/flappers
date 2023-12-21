@@ -1,33 +1,30 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+function Level({ level }) {
+  return (
+    <div className="level">
+      <img src={`/images/${level}.png`} alt={`level ${level}`} />
+      <div className="rlBTRFLY">{level} rlBTRFLY</div>
+      <button>Mint</button>
+    </div>
+  )
+}
 
+function App() {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Flappers</h1>
+      <p>You're mainly into defi, that's why you like Redacted so much. But wouldn't it be fun to have some NFTs to show off just how much you like it?</p>
+      <p>Each level of Flapper is available to mint depending on how much rlBTRFLY your wallet has locked. This is to prove your flappiness! Each wallet is only allowed to mint (up to) one copy of each level.</p>
+      <section className="levels-grid">
+        <Level level={1} />
+        <Level level={10} />
+        <Level level={100} />
+        <Level level={1000} />
+      </section>
+      <p>You will pay a little bit of ETH to mint, but your rlBTRFLY stays yours.</p>
+      <p>There is no cap on the supply of any of these NFTs. It is entirely driven by how many people have enough rlBTRFLY to mint them.</p>
     </>
   )
 }
