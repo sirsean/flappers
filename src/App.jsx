@@ -15,6 +15,7 @@ function App() {
   return (
     <>
       <h1>Flappers</h1>
+      <h2>can we get an NFT just because lol</h2>
       <p>You're mainly into defi, that's why you like Redacted so much. But wouldn't it be fun to have some NFTs to show off just how much you like it?</p>
       <p>Each level of Flapper is available to mint depending on how much rlBTRFLY your wallet has locked. This is to prove your flappiness! Each wallet is only allowed to mint (up to) one copy of each level.</p>
       <section className="levels-grid">
