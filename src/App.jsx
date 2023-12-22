@@ -9,6 +9,7 @@ import FlappersABI from '../abi/FlappersABI.js';
 import './App.css'
 import { useEffect } from 'react'
 
+// for local development only
 const hardhat = {
   id: 31337,
   name: 'Hardhat',
@@ -22,14 +23,15 @@ const hardhat = {
     public: { http: ['http://127.0.0.1:8545'] },
     default: { http: ['http://127.0.0.1:8545/'] },
   },
-} 
+}
 
-const chains = [hardhat]
+const chains = [mainnet]
 const projectId = '465cea506266b994b7edc2d57c2c0006'
 
-// TODO: get the deployed address
+// make sure we're pointed at the right address
 const HARDHAT_FLAPPERS_ADDRESS = '0x839C1B05486161632b09E71d9Ba79731d44bb534';
-const FLAPPERS_ADDRESS = HARDHAT_FLAPPERS_ADDRESS;
+const MAINNET_FLAPPERS_ADDRESS = '0x839C1B05486161632b09E71d9Ba79731d44bb534';
+const FLAPPERS_ADDRESS = MAINNET_FLAPPERS_ADDRESS;
 const RLBTRFLY_ADDRESS = '0x742B70151cd3Bc7ab598aAFF1d54B90c3ebC6027';
 
 const { publicClient } = configureChains(chains, [w3mProvider({ projectId })])
@@ -133,6 +135,7 @@ function HomePage() {
       <p>There is no cap on the supply of any of these NFTs. It is entirely driven by how many people have enough rlBTRFLY to mint them.</p>
       <ul>
         <li><a target="_blank" href="https://github.com/sirsean/flappers">Github</a></li>
+        <li><a target="_blank" href="https://etherscan.io/address/0x839C1B05486161632b09E71d9Ba79731d44bb534">Etherscan</a></li>
       </ul>
     </>
   );
