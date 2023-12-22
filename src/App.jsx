@@ -136,6 +136,7 @@ function HomePage() {
       <ul>
         <li><a target="_blank" href="https://github.com/sirsean/flappers">Github</a></li>
         <li><a target="_blank" href={`https://etherscan.io/address/${FLAPPERS_ADDRESS}`}>Etherscan</a></li>
+        <li><a target="_blank" href={`https://opensea.io/collection/redacted-flappers`}>OpenSea</a></li>
       </ul>
     </>
   );
