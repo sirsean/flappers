@@ -28,6 +28,12 @@ p {
   text-align: left;
 }
 
+ul {
+  max-width: 800px;
+  margin: 12px auto;
+  text-align: left;
+}
+
 .levels-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

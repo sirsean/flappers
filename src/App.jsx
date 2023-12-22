@@ -131,6 +131,9 @@ function HomePage() {
       </section>
       <p>You will pay a little bit of ETH to mint, but your rlBTRFLY stays yours.</p>
       <p>There is no cap on the supply of any of these NFTs. It is entirely driven by how many people have enough rlBTRFLY to mint them.</p>
+      <ul>
+        <li><a target="_blank" href="https://github.com/sirsean/flappers">Github</a></li>
+      </ul>
     </>
   );
 }
