@@ -135,7 +135,7 @@ function HomePage() {
       <p>There is no cap on the supply of any of these NFTs. It is entirely driven by how many people have enough rlBTRFLY to mint them.</p>
       <ul>
         <li><a target="_blank" href="https://github.com/sirsean/flappers">Github</a></li>
-        <li><a target="_blank" href={`https://etherscan.io/address/{FLAPPERS_ADDRESS}`}>Etherscan</a></li>
+        <li><a target="_blank" href={`https://etherscan.io/address/${FLAPPERS_ADDRESS}`}>Etherscan</a></li>
       </ul>
     </>
   );
