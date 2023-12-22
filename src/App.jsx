@@ -30,7 +30,7 @@ const projectId = '465cea506266b994b7edc2d57c2c0006'
 
 // make sure we're pointed at the right address
 const HARDHAT_FLAPPERS_ADDRESS = '0x839C1B05486161632b09E71d9Ba79731d44bb534';
-const MAINNET_FLAPPERS_ADDRESS = '0x839C1B05486161632b09E71d9Ba79731d44bb534';
+const MAINNET_FLAPPERS_ADDRESS = '0x303e956440B2f61c7aDe26E43886F03560a3c8AF';
 const FLAPPERS_ADDRESS = MAINNET_FLAPPERS_ADDRESS;
 const RLBTRFLY_ADDRESS = '0x742B70151cd3Bc7ab598aAFF1d54B90c3ebC6027';
 
@@ -135,7 +135,7 @@ function HomePage() {
       <p>There is no cap on the supply of any of these NFTs. It is entirely driven by how many people have enough rlBTRFLY to mint them.</p>
       <ul>
         <li><a target="_blank" href="https://github.com/sirsean/flappers">Github</a></li>
-        <li><a target="_blank" href="https://etherscan.io/address/0x839C1B05486161632b09E71d9Ba79731d44bb534">Etherscan</a></li>
+        <li><a target="_blank" href={`https://etherscan.io/address/{FLAPPERS_ADDRESS}`}>Etherscan</a></li>
       </ul>
     </>
   );

@@ -3,6 +3,7 @@ pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
 // this is all we need from rlBTRFLY
 interface IERC20Decimals {
@@ -83,5 +84,14 @@ contract Flappers is ERC1155, Ownable {
         _mint(msg.sender, level, 1, "");
 
         payable(owner()).transfer(msg.value);
+    }
+
+    function uri(uint256 _tokenId) override public pure returns (string memory) {
+        return string(
+            abi.encodePacked(
+                "https://flappers.sirsean.me/metadata/",
+                Strings.toString(_tokenId),".json"
+            )
+        );
     }
 }

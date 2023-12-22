@@ -90,4 +90,11 @@ describe("Flappers", function () {
             expect(await flappers.connect(signer).canMint(1)).to.equal(false);
         });
     });
+
+    describe("uri", () => {
+        it("should be able to get the uri", async () => {
+            const { flappers } = await loadFixture(deployContract);
+            expect(await flappers.uri(1)).to.equal("https://flappers.sirsean.me/metadata/1.json");
+        });
+    });
 });
