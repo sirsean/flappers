@@ -47,6 +47,13 @@ p {
   border-radius: 12px;
 }
 
+.level p {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .level .rlBTRFLY {
   position: absolute;
   top: 5%;

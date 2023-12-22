@@ -10,7 +10,6 @@ interface IERC20Decimals {
     function balanceOf(address account) external view returns (uint256);
 }
 
-// TODO: make sure only the subset of levels can be minted
 contract Flappers is ERC1155, Ownable {
     IERC20Decimals public rlBTRFLY;
     uint public mintCost;

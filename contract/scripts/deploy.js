@@ -7,16 +7,26 @@
 const hre = require("hardhat");
 
 async function main() {
-  const owner = "0x560EBafD8dB62cbdB44B50539d65b48072b98277";
+  const [owner] = await hre.ethers.getSigners();
   const rlBTRFLY = "0x742B70151cd3Bc7ab598aAFF1d54B90c3ebC6027";
   const mintCost = hre.ethers.parseEther("0.01");
   const levels = [1, 10, 100, 1000];
+  const deployArgs = [owner.address, rlBTRFLY, mintCost, levels];
+  console.log(deployArgs);
 
-  const flappers = await hre.ethers.deployContract("Flappers", [owner, rlBTRFLY, mintCost, levels], {});
+  const flappers = await hre.ethers.deployContract("Flappers", deployArgs, {});
 
   await flappers.waitForDeployment();
 
   console.log(`Contract deployed to: ${flappers.target}`);
+
+  if (hre.network.name === "mainnet") {
+    console.log('verifying contract');
+    await hre.run("verify:verify", {
+      address: flappers.target,
+      constructorArguments: deployArgs,
+    });
+  }
 }
 
 // We recommend this pattern to be able to use async/await everywhere

@@ -2,6 +2,7 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 require("@nomicfoundation/hardhat-toolbox");
+require("@nomicfoundation/hardhat-verify");
 require('hardhat-abi-exporter');
 
 const configPath = path.join(os.homedir(), '.wallet');
@@ -21,6 +22,14 @@ module.exports = {
     },
   },
   networks: {
+    localhost: {
+      url: "http://127.0.0.1:8545",
+      accounts: [config.key],
+      forking: {
+        url: config.mainnet,
+        accounts: [config.key],
+      },
+    },
     hardhat: {
       mining: {
         auto: true,
