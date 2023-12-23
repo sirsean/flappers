@@ -76,7 +76,26 @@ ul {
 }
 
 @media(max-width: 1184px) {
+  .level img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media(max-width: 768px) {
   .levels-grid {
     grid-template-columns: 1fr;
+  }
+
+  .level img {
+    height: 512px;
+    width: auto;
+  }
+}
+
+@media(max-width: 640px) {
+  .level img {
+    height: auto;
+    width: 100%;
   }
 }
